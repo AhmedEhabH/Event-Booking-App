@@ -1,9 +1,9 @@
 {
     "env":{
+        "PORT":8000,
         "MONGO_USER":"ahmedehab",
         "MONGO_PASSWORD":"Password",
         "MONGO_DB":"events-react-dev",
-        "JWT_SECRET": "somesupersecretkey",
-        "PORT":8000
+        "JWT_SECRET": "somesupersecretkey"
     }
 }
