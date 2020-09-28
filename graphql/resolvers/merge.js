@@ -40,6 +40,11 @@ const events = async (eventIds) => {
                 $in: eventIds,
             },
         });
+        events.sort((a, b) => {
+            return (
+                eventIds.indexOf(a._id.toString()) - eventIds.indexOf(b._id.toString())
+            );
+        });
         return events.map((event) => {
             return transformEvent(event);
         });
@@ -75,8 +80,5 @@ const user = async (userId) => {
     }
 };
 
-// exports.user = user;
-// exports.events = events;
-// exports.singleEvent = singleEvent;
 exports.transformEvent = transformEvent;
 exports.transformBooking = transformBooking;
